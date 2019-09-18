@@ -1,6 +1,18 @@
+
+console.log("javascript is loaded")
+
 // Create all my variables for game logic
+
 // Display beginning Random Number
-var displayRandomNum = (benchmarkNum);
+var displayRandomNum = "";
+
+var playerScore = [];
+
+// Crystal 
+var crystalPink = "";
+var crystalBlue= "";
+var crystalPurple = "";
+var crystalWhite = "";
 
 //wins (number)
 var wins = 0;
@@ -8,28 +20,23 @@ var wins = 0;
 //losses (number)
 var losses = 0;
 
-// Crystal 
-var crystalOne = (crystalRandomNum);
-var crystalTwo = (crystalRandomNum);
-var crystalThree = (crystalRandomNum);
-var crystalFour = (crystalRandomNum);
-
-//Total Score
-var displayTotalScore = 0;
-
 //create a function to start/reset the game
 function newGame() {
   //  created random number for display
-  var benchmarkNum = Math.floor((Math.random() * 102) + 19);
+  displayRandomNum = Math.floor((Math.random() * 102) + 19);
   $("#displayRandomNum").text(displayRandomNum);
-  // create random number for each crystal
-  var crystalRandomNum = Math.floor((Math.random() * 12) + 1);
-  
-  console.log(displayRandomNumber)
-  console.log(crystalRandomNum)
 
+  crystalPink = Math.floor((Math.random() * 12) + 1);
+  $("#crystalPink").text(crystalPink);
+
+  crystalBlue = Math.floor((Math.random() * 12) + 1);
+ // $("#crystalBlue").text(crystalBlue);
+  crystalPurple = Math.floor((Math.random() * 12) + 1);
+  //$("#crystalPurple").text(crystalPurple);
+
+ crystalWhite = Math.floor((Math.random() * 12) + 1);
+  //$("#crystalWhite").text(crystalWhite);
 }
-
 
 //   Create onkeyup event 
 document.onkeyup = function (event) {
@@ -62,7 +69,6 @@ document.onkeyup = function (event) {
   //THIS IS YOUR LOSS CONDITION
   if (userGuesses === 0) {
     losses++;
-
     newGame();
 
     // update our page with lossess using Jquery

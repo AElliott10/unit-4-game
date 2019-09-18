@@ -1,42 +1,92 @@
+<!---->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
-<link rel="stylesheet" href="style.css">
-<title>Crystal Collector Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link rel="stylesheet" href="assets\css\style.css">
+    <link rel="assets\css\reset.css">
+    <title>Crystal Collector Game</title>
 </head>
+
 <body>
-<h1>Crystal Collector!</h1>
-<p>You will be given a random number at the start of the game.</p>
+    <h1>Crystal Collector!</h1>
 
-<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+    <p>You will be given a random number at the start of the game.</p>
 
-<p>You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</p>
+    <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total
+        score.</p>
 
-<p>The value of each crystal is hidden form you until you click on it.</p>
+    <p>You win the game by matching your total score to the random number. You lose the game if your total score goes
+        above the random number.</p>
 
-<p>Each time when the game starts, the game will change the values of each crytal.</p>
+    <p>The value of each crystal is hidden form you until you click on it.</p>
 
-<div id = displayRandomNum>Placeholder Random Number Box</div>
+    <p>Each time when the game starts, the game will change the values of each crystal.</p>
 
-<div>Placeholder Win and Loss Count Box</div>
 
-<div id= crystalOne>CrystalOne</div>
-<div id= crystalTwo>CrystalTwo</div>
-<div id= crystalThree>CrystalThree</div>
-<div id = crystalFour>CrystalFour</div>
+    <div class="row">
+        <div class="col-sm-12">
+            <p>Crystal number to match:<div id=displayRandomNum></div>
+            </p>
+        </div>
+        <div class="col-sm-12">
+            <p>Your count:<div id=playerScore></div>
+            </p>
+        </div>
+    </div>
 
-<div>Your total score:</div>
+    <div class="row">
 
-<div>Placeholder Score Box</div>
+        <div class="col-sm-3">
+            <div id=crystalPink>
+                <div class="card">
+                    <img src="assets/images/Pinkstone.png" class="card-img" alt="Pink Stone">
+                </div>
+            </div>
+        </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="/assets/javascript/game.js"></script>
+        <div class="col-sm-3">
+            <div id=crystalBlue>
+                <div class="card">
+                    <img src="assets/images/bluestone.png" class="card-img" alt="blue Stone">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div id=crystalPurple>
+                <div class="card">
+                    <img src="assets/images/Purplestone.png" class="card-img" alt="Purple Stone">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div id=crystalWhite>
+                <div class="card">
+                    <img src="assets/images/whitestone.png" class="card-img" alt="White Stone">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-sm-6"></div>
+    <div id=wins>Wins:</div>
+
+    <div class="col-sm-6"></div>
+    <div id=losses>Losses:</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="assets\javascript\game.js"></script>
 </body>
+
 </html>
