@@ -28,59 +28,71 @@
 
     <p>Each time when the game starts, the game will change the values of each crystal.</p>
 
-
+</div>
     <div class="row">
         <div class="col-sm-12">
-            <p>Crystal number to match:<div id=displayRandomNum></div>
-            </p>
+            <span>Crystal number to match:
+                <div id=displayRandomNum></div>
+            </span>
         </div>
         <div class="col-sm-12">
-            <p>Your count:<div id=playerScore></div>
-            </p>
+            <span>Your count:
+                <div id=playerScore></div>
+            </span>
         </div>
     </div>
 
     <div class="row">
-
+        </button>
         <div class="col-sm-3">
-            <div id=crystalPink>
-                <div class="card">
-                    <img src="assets/images/Pinkstone.png" class="card-img" alt="Pink Stone">
+            <button onclick="playerClick()">
+                <div id=crystalPink>
+                    <div class="card">
+                        <img src="assets/images/Pinkstone.png" class="card-img" alt="Pink Stone">
+                    </div>
                 </div>
-            </div>
+            </button>
         </div>
 
         <div class="col-sm-3">
-            <div id=crystalBlue>
-                <div class="card">
-                    <img src="assets/images/bluestone.png" class="card-img" alt="blue Stone">
+            <button onclick="playerClick()">
+                <div id=crystalBlue>
+                    <div class="card">
+                        <img src="assets/images/bluestone.png" class="card-img" alt="blue Stone">
+                    </div>
                 </div>
-            </div>
+            </button>
         </div>
 
         <div class="col-sm-3">
-            <div id=crystalPurple>
-                <div class="card">
-                    <img src="assets/images/Purplestone.png" class="card-img" alt="Purple Stone">
+            <button onclick="playerClick()">
+                <div id=crystalPurple>
+                    <div class="card">
+                        <img src="assets/images/Purplestone.png" class="card-img" alt="Purple Stone">
+                    </div>
                 </div>
-            </div>
+            </button>
         </div>
 
         <div class="col-sm-3">
-            <div id=crystalWhite>
-                <div class="card">
-                    <img src="assets/images/whitestone.png" class="card-img" alt="White Stone">
+            <button onclick="playerClick()">
+                <div id=crystalWhite>
+                    <div class="card">
+                        <img src="assets/images/whitestone.png" class="card-img" alt="White Stone">
+                    </div>
                 </div>
-            </div>
+            </button>
         </div>
 
     </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <span id=wins>Wins:</span>
+        </div>
 
-    <div class="col-sm-6"></div>
-    <div id=wins>Wins:</div>
-
-    <div class="col-sm-6"></div>
-    <div id=losses>Losses:</div>
+        <div class="col-sm-6">
+            <span id=losses>Losses:</span>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
