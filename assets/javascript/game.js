@@ -92,4 +92,4 @@ playerScore = 0;
    }
 
    newGame();
-   //run new game function,  you start your newgame function or restart whatever you called it here should be the last thing on the page so every time a user logs in it will start a new game.  Let me know if you need help we can always do a zoom session and i can walk you through if you get stuck
+   //run new game function,  you start your newgame function or restart whatever you called it here should be the last thing on the page so every time a user logs in it will start a new game.
