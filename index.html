@@ -15,86 +15,73 @@
 
 <body>
     <h1>Crystal Collector!</h1>
-
-    <p>You will be given a random number at the start of the game.</p>
-
-    <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total
-        score.</p>
-
-    <p>You win the game by matching your total score to the random number. You lose the game if your total score goes
-        above the random number.</p>
-
-    <p>The value of each crystal is hidden form you until you click on it.</p>
-
-    <p>Each time when the game starts, the game will change the values of each crystal.</p>
-
+   <p>You will be given a random number at the start of the game.</p>
+   <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total
+       score.</p>
+   <p>You win the game by matching your total score to the random number. You lose the game if your total score goes
+       above the random number.</p>
+   <p>The value of each crystal is hidden form you until you click on it.</p>
+   <p>Each time when the game starts, the game will change the values of each crystal.</p>
 </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <span>Crystal number to match:
-                <div id=displayRandomNum></div>
-            </span>
-        </div>
-        <div class="col-sm-12">
-            <span>Your count:
-                <div id=playerScore></div>
-            </span>
-        </div>
-    </div>
-
-    <div class="row">
-        </button>
-        <div class="col-sm-3">
-            <button onclick="playerClick()">
-                <div id=crystalPink>
-                    <div class="card">
-                        <img src="assets/images/Pinkstone.png" class="card-img" alt="Pink Stone">
-                    </div>
-                </div>
-            </button>
-        </div>
-
-        <div class="col-sm-3">
-            <button onclick="playerClick()">
-                <div id=crystalBlue>
-                    <div class="card">
-                        <img src="assets/images/bluestone.png" class="card-img" alt="blue Stone">
-                    </div>
-                </div>
-            </button>
-        </div>
-
-        <div class="col-sm-3">
-            <button onclick="playerClick()">
-                <div id=crystalPurple>
-                    <div class="card">
-                        <img src="assets/images/Purplestone.png" class="card-img" alt="Purple Stone">
-                    </div>
-                </div>
-            </button>
-        </div>
-
-        <div class="col-sm-3">
-            <button onclick="playerClick()">
-                <div id=crystalWhite>
-                    <div class="card">
-                        <img src="assets/images/whitestone.png" class="card-img" alt="White Stone">
-                    </div>
-                </div>
-            </button>
-        </div>
-
-    </div>
-    <div class="row">
-        <div class="col-sm-6">
-            <span id=wins>Wins:</span>
-        </div>
-
-        <div class="col-sm-6">
-            <span id=losses>Losses:</span>
-        </div>
-    </div>
-
+   <div class="row">
+       <div class="col-sm-6">
+           <span>Crystal number to match:
+               <div id=displayRandomNum></div>
+           </span>
+       </div>
+       <div class="col-sm-6">
+           <span>Your count:
+               <div id="playerScore"></div>
+           </span>
+       </div>
+   </div>
+   <div class="row">
+      
+       <div class="col-sm-3">
+           <button>
+               <div id="crystalPink">
+                   <div class="card">
+                       <img src="assets/images/Pinkstone.png" class="card-img" alt="Pink Stone">
+                   </div>
+               </div>
+           </button>
+       </div>
+       <div class="col-sm-3">
+           <button>
+               <div id="crystalBlue">
+                   <div class="card">
+                       <img src="assets/images/bluestone.png" class="card-img" alt="blue Stone">
+                   </div>
+               </div>
+           </button>
+       </div>
+       <div class="col-sm-3">
+           <button>
+               <div id="crystalPurple">
+                   <div class="card">
+                       <img src="assets/images/Purplestone.png" class="card-img" alt="Purple Stone">
+                   </div>
+               </div>
+           </button>
+       </div>
+       <div class="col-sm-3">
+           <button>
+               <div id="crystalWhite">
+                   <div class="card">
+                       <img src="assets/images/whitestone.png" class="card-img" alt="White Stone">
+                   </div>
+               </div>
+           </button>
+       </div>
+   </div>
+   <div class="row">
+       <div class="col-sm-6">
+           <span id=wins>Wins:</span>
+       </div>
+       <div class="col-sm-6">
+           <span id=losses>Losses:</span>
+       </div>
+   </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
