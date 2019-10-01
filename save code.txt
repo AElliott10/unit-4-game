@@ -1,0 +1,193 @@
+JS code
+console.log("javascript is loaded");
+
+// Create all my variables for game logic
+// Display beginning Random Number
+var displayRandomNum = "";
+var playerScore = 0;
+var crystal = ""
+var wins = 0;
+var losses = 0;
+//create a function to start/reset the game
+
+ //created random number for display
+
+ displayRandomNum = Math.floor((Math.random() * 102) + 19);
+ $("#displayRandomNum").text(displayRandomNum);
+
+ crystal = Math.floor((Math.random() * 12) + 1);
+$("#crystal").text(crystal);
+ 
+//Crystal button OnClick Function
+
+
+
+/*
+$("#playerScore").text(playerScore);
+
+//
+
+
+grab just crystal values; and make a onclick function for entire game -whole page is listening for a click event make one click event and put in win/loss condition in the onclick event. remove all the individual click events.
+
+$("#crystal").click(function() {
+  // console.log(crystal)
+//  THIS IS YOUR WIN CONDITION!!!
+  //  Start if statements for your win;if the user's letter
+  if (playerScore === displayRandomNum) {
+    // increase wins by 1
+    wins++;
+    // run reset function you wrote above
+    newGame();
+    // update your HTML here / wins section
+    $("#wins").text(wins);
+  }
+
+  //THIS IS YOUR LOSS CONDITION Make else
+  // if playerScore exceeds displayRandom number then log a loss
+  else (playerScore > displayRandomNum) {
+    losses++;
+    // run reset function you wrote above
+    newGame();
+    // update your HTML here / loss section
+    $("#losses").text(losses);
+  }
+
+  addPoints(crystalAny);
+});
+
+/*
+$("#crystalBlue").click(function() {
+  // console.log(crystalBlue)
+  addPoints(crystalBlue);
+});
+$("#crystalPurple").click(function() {
+  // console.log(crystalPurple)
+  addPoints(crystalPurple);
+});
+$("#crystalWhite").click(function() {
+  // console.log(crystalWhite)
+  addPoints(crystalWhite);
+});
+
+
+function addPoints(crystalAny) {
+  playerScore += crystal;
+  $("#playerScore").text(playerScore);
+};
+
+function newGame() {
+  //when a player wins or loses the game reset random number 
+  
+ playerScore >= displayRandomNum;
+
+//reset player score to 0
+playerScore = 0;
+
+
+  
+   newGame();
+   //run new game function,  you start your newgame function or restart whatever you called it here should be the last thing on the page so every time a user logs in it will start a new game.
+  */
+
+
+
+
+
+
+
+
+
+HTML code
+
+<!---->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link rel="stylesheet" href="assets\css\style.css">
+    <link rel="assets\css\reset.css">
+    <title>Crystal Collector Game</title>
+</head>
+
+<body>
+    <h1>Crystal Collector!</h1>
+   <p>You will be given a random number at the start of the game.</p>
+   <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total
+       score.</p>
+   <p>You win the game by matching your total score to the random number. You lose the game if your total score goes
+       above the random number.</p>
+   <p>The value of each crystal is hidden form you until you click on it.</p>
+   <p>Each time when the game starts, the game will change the values of each crystal.</p>
+</div>
+   <div class="row">
+       <div class="col-sm-6">
+           <span>Crystal number to match:
+               <div id=displayRandomNum></div>
+           </span>
+       </div>
+       <div class="col-sm-6">
+           <span>Your count:
+               <div id="playerScore"></div>
+           </span>
+       </div>
+   </div>
+   <div class="row">
+      
+       <div class="col-sm-3">
+           <button>
+               <div id="crystal">
+                   <div class="card">
+                       <img src="assets/images/Pinkstone.png" class="card-img" alt="Pink Stone">
+                   </div>
+               </div>
+           </button>
+       </div>
+       <div class="col-sm-3">
+           <button>
+               <div id="crystal">
+                   <div class="card">
+                       <img src="assets/images/bluestone.png" class="card-img" alt="blue Stone">
+                   </div>
+               </div>
+           </button>
+       </div>
+       <div class="col-sm-3">
+           <button>
+               <div id="crystal">
+                   <div class="card">
+                       <img src="assets/images/Purplestone.png" class="card-img" alt="Purple Stone">
+                   </div>
+               </div>
+           </button>
+       </div>
+       <div class="col-sm-3">
+           <button>
+               <div id="crystal">
+                   <div class="card">
+                       <img src="assets/images/whitestone.png" class="card-img" alt="White Stone">
+                   </div>
+               </div>
+           </button>
+       </div>
+   </div>
+   <div class="row">
+       <div class="col-sm-6">
+           <span id=wins>Wins:</span>
+       </div>
+       <div class="col-sm-6">
+           <span id=losses>Losses:</span>
+       </div>
+   </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="assets\javascript\game.js"></script>
+</body>
+
+</html>

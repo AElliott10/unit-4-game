@@ -1,95 +1,93 @@
-console.log("javascript is loaded");
+console.log('javascript is loaded');
 // Create all my variables for game logic
 // Display beginning Random Number
-var displayRandomNum = "";
+var displayRandomNum = '';
 var playerScore = 0;
-// Crystal
-var crystalPink = "";
-var crystalBlue = "";
-var crystalPurple = "";
-var crystalWhite = "";
-//wins (number)
+// var crystal = crystalRandom();
 var wins = 0;
-//losses (number)
 var losses = 0;
 //create a function to start/reset the game
+//created random number for display
+function resetRandomNum() {
+  displayRandomNum = Math.floor(Math.random() * 102 + 19);
+  $('#displayRandomNum').text(displayRandomNum);
+}
+var crystalPink = '';
+var crystalBlue = '';
+var crystalPurple = '';
+var crystalWhite = '';
+//jquery to display on the dom
+$('#playerScore').text(playerScore);
 
+function crystalRandom() {
+  crystalPink = Math.floor(Math.random() * 12 + 1);
+  crystalBlue = Math.floor(Math.random() * 12 + 1);
+  crystalPurple = Math.floor(Math.random() * 12 + 1);
+  crystalWhite = Math.floor(Math.random() * 12 + 1);
+}
 
-
- //created random number for display
- displayRandomNum = Math.floor((Math.random() * 102) + 19);
- $("#displayRandomNum").text(displayRandomNum);
-
- crystalPink = Math.floor((Math.random() * 12) + 1);
-//  $("#crystalPink").text(crystalPink);
- crystalBlue = Math.floor((Math.random() * 12) + 1);
- // $("#crystalBlue").text(crystalBlue);
- crystalPurple = Math.floor((Math.random() * 12) + 1);
- //$("#crystalPurple").text(crystalPurple);
-
- crystalWhite = Math.floor((Math.random() * 12) + 1);
- //$("#crystalWhite").text(crystalWhite);
-
-$("#playerScore").text(playerScore);
-
-$("#crystalPink").click(function() {
-  // console.log(crystalPink)
-  addPoints(crystalPink);
+/*Crystal button OnClick Function
+- when the crystal is clicked the random value is added to the previous value recorded in player score
+*/
+//update score one click
+$('#crystalPink').on('click', function() {
+  playerScore += crystalPink;
+  $('#playerScore').text(playerScore);
+  console.log(crystalPink);
+  checkWin();
 });
-$("#crystalBlue").click(function() {
-  // console.log(crystalBlue)
-  addPoints(crystalBlue);
+$('#crystalBlue').on('click', function() {
+  playerScore += crystalBlue;
+  $('#playerScore').text(playerScore);
+  console.log(crystalBlue);
+  checkWin();
 });
-$("#crystalPurple").click(function() {
-  // console.log(crystalPurple)
-  addPoints(crystalPurple);
+$('#crystalPurple').on('click', function() {
+  playerScore += crystalPurple;
+  $('#playerScore').text(playerScore);
+  console.log(crystalPurple);
+  checkWin();
 });
-$("#crystalWhite").click(function() {
-  // console.log(crystalWhite)
-  addPoints(crystalWhite);
+$('#crystalWhite').on('click', function() {
+  playerScore += crystalWhite;
+  $('#playerScore').text(playerScore);
+  console.log(crystalWhite);
+  checkWin();
 });
 
-function addPoints(crystal) {
-  playerScore += crystal;
-  $("#playerScore").text(playerScore);
-};
+//  Start if statements for your win;if the user's letter
 
+function checkWin() {
+  if (playerScore === displayRandomNum) {
+    // increase wins by 1
+    wins++;
+    // update your HTML here / wins section
+    $('#wins').text(wins);
+    
+    // run reset function you wrote above
+    newGame();
+  }
+  //THIS IS YOUR LOSS CONDITION Make else
+  // if playerScore exceeds displayRandom number then log a loss
+  else if (playerScore > displayRandomNum) {
+    losses++;
+    // update your HTML here / loss section
+    $('#losses').text(losses);
+    
+    // run reset function you wrote above
+    newGame();
+  }
+}
+//grab just crystal values; and make a onclick function for entire game -whole page is listening for a click event make one click event and put in win/loss condition in the onclick event. remove all the individual click events.
+//Reset Game
+//when a player wins or loses the game reset random number
 function newGame() {
-  //when a player wins or loses the game reset random number 
-  
- playerScore >= displayRandomNum;
-
-//reset player score to 0
-playerScore = 0;
-
-//create new random numbers
- }
-
-  //wins get updated and loss gets update - below
-
-  //crystal random resets
-
-
-  //  THIS IS YOUR WIN CONDITION!!!
-  //  Start if statements for your win;if the user's letter
-   if (playerScore === displayRandomNum) {
-     // increase wins by 1
-     wins++;
-     // run reset function you wrote above
-     newGame();
-     // update your HTML here / wins section
-     $("#wins").text(wins);
-   }
-
-   //THIS IS YOUR LOSS CONDITION
-   // if playerScore exceeds displayRandom number then log a loss
-   if (playerScore > displayRandomNum) {
-     losses++;
-     // run reset function you wrote above
-     newGame();
-     // update your HTML here / loss section
-     $("#losses").text(losses);
-   }
-
-   newGame();
-   //run new game function,  you start your newgame function or restart whatever you called it here should be the last thing on the page so every time a user logs in it will start a new game.
+  //reset player score to 0
+  playerScore = 0;
+  //reset crystal values
+  $('#playerScore').text(playerScore);
+  crystalRandom();
+  resetRandomNum();
+}
+newGame();
+//run new game function,  you start your newgame function or restart whatever you called it here should be the last thing on the page ??//so every time a user logs in it will start a new game
